@@ -359,15 +359,25 @@ private fun MainContent(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.SpaceEvenly
             ) {
-                PizzaName(
-                    name = "New Orleans Pizza",
-                    modifier = Modifier,
-                    isPizzaSelected = isPizzaSelected.value
-                )
-                Spacer(modifier = Modifier.height(10.dp))
-                AnimatedVisibility(visible = !isPizzaSelected.value) {
-                    Stars()
-                }
+                AnimatedVisibility(
+                    enter = slideInVertically(animationSpec = tween(100)) { -it * 3 },
+                    exit = slideOutVertically(tween(100)) { -it * 3 },
+                    visible = !isPizzaSelected.value,
+                    content = {
+                        Column (modifier = Modifier.fillMaxWidth(),   horizontalAlignment = Alignment.CenterHorizontally,){
+                            Text(
+                                text = "New Orleans Pizza",
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 22.sp,
+                                color = Pink40,
+                                textAlign = TextAlign.Center
+                            )
+                            Spacer(modifier = Modifier.height(10.dp))
+                            Stars()
+                        }
+
+                    })
+
                 Spacer(modifier = Modifier.height(10.dp))
                 Text(text = "$15", fontWeight = FontWeight.Bold, fontSize = 32.sp, color = Pink40)
                 Spacer(modifier = Modifier.height(20.dp))
