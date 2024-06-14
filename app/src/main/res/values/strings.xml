@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PizzaOrder</string>
+    <string name="pizza">Pizza</string>
+    <string name="must_be">(Must Be %s)</string>
+    <string name="tapping">Tapping</string>
+    <string name="order_manually">Order Manually</string>
 </resources>
