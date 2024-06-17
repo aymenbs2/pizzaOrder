@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+
 }
 
 android {
@@ -61,6 +62,9 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.google.accompanist.pager)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.google.dagger)
+    annotationProcessor(libs.google.hilt.compiler)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

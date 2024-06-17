@@ -10,6 +10,8 @@ activityCompose = "1.9.0"
 composeBom = "2023.08.00"
 pagerVersion="0.24.13-rc"
 constraintlayoutVersion="1.0.1"
+hiltVersion="2.51.1"
+hiltPlugVerion="2.44"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,10 +30,14 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref ="constraintlayoutVersion" }
 
+google-dagger= { group = "com.google.dagger", name = "hilt-android", version.ref ="hiltVersion" }
+google-hilt-compiler= { group = "com.google.dagger", name = "hilt-compiler", version.ref ="hiltVersion" }
+
 google-accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref ="pagerVersion" }
 
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+hiltAndroid = { id = "dagger.hilt.android.plugin", version.ref = "hiltPlugVerion" }
 
