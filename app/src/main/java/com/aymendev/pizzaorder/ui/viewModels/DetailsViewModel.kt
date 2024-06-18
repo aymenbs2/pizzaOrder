@@ -17,8 +17,10 @@ class MainViewModel @Inject constructor(): ViewModel(){
     lateinit var currentCart: MutableList<Order?>
     val currentSupplement= mutableListOf<PizzaSupplement>()
     val supplements= listOf(
-        PizzaSupplement(id = 0,name="Potato", image = R.drawable.potato,1F),
-        PizzaSupplement(id = 1,name="Champinion", image = R.drawable.champinion,1F)
+        PizzaSupplement(id = 0,name="Pimenent", image = R.drawable.red_piment,1F),
+        PizzaSupplement(id = 1,name="Potato", image = R.drawable.potato,1F),
+        PizzaSupplement(id = 1,name="Capres", image = R.drawable.capres,1F),
+        PizzaSupplement(id = 2,name="Champinion", image = R.drawable.champinion,1F)
     )
     val pizzas= listOf(
         Pizza(id = 0, name = "New Orleans Pizza", image = R.drawable.pizza, price= 16F),

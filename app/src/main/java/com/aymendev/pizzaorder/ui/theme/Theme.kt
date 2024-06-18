@@ -13,12 +13,23 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.core.view.WindowCompat
+import com.aymendev.pizzaorder.R
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,
     tertiary = Pink80
+)
+
+val dancingScriptFont = FontFamily(
+    Font(R.raw.dancingscript, FontWeight.Normal),
+)
+val prataFont = FontFamily(
+    Font(R.raw.prata_regular, FontWeight.Normal),
 )
 
 private val LightColorScheme = lightColorScheme(
