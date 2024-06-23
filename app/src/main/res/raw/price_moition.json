@@ -1,0 +1,42 @@
+{
+  "ConstraintSets": {
+    "start": {
+      "button": {
+        "width": "wrap",
+        "height": "wrap",
+        "start": [
+          "parent",
+          "start",
+          16
+        ],
+        "top": [
+          "parent",
+          "top",
+          16
+        ]
+      }
+    },
+    "end": {
+      "button": {
+        "width": "wrap",
+        "height": "wrap",
+        "end": [
+          "parent",
+          "end",
+          16
+        ],
+        "bottom": [
+          "parent",
+          "bottom",
+          16
+        ]
+      }
+    }
+  },
+  "Transitions": {
+    "default": {
+      "from": "top",
+      "to": "top"
+    }
+  }
+}

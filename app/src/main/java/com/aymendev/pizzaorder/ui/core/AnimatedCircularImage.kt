@@ -25,7 +25,7 @@ import kotlin.math.sin
 @Composable
 fun AnimatedCircularImages(
     modifier: Modifier,
-    champinion: Int,
+    img: Int,
     center: Offset = Offset(0f, 0f),
     numberOfImages: Int = 6,
     radius: Int = 50
@@ -65,7 +65,7 @@ fun AnimatedCircularImages(
                     }
             ) {
                 Image(
-                    painter = painterResource(id = champinion),
+                    painter = painterResource(id = img),
                     contentDescription = null,
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Inside

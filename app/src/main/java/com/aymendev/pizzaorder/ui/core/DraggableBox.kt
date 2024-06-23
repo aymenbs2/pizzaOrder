@@ -24,6 +24,7 @@ import kotlin.math.roundToInt
 fun DraggableBox(
     modifier: Modifier,
     targetLayoutCoordinates: MutableState<Any>,
+    enableDrag:MutableState<Boolean>,
     onDragged: () -> Unit,
     content: @Composable BoxScope.() -> Unit
 ) {
@@ -60,8 +61,11 @@ fun DraggableBox(
                         offsetY = 0f
                     }
                 ) { change, dragAmount ->
-                    offsetX += dragAmount.x
-                    offsetY += dragAmount.y
+                    if(enableDrag.value){
+                        offsetX += dragAmount.x
+                        offsetY += dragAmount.y
+                    }
+
 
                 }
             },
